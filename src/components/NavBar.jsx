@@ -13,7 +13,7 @@ const Navbar = ({setProductsFilter, setOpenCart, cartItems}) => {
                     <img onClick={() => setProductsFilter("")} src={window.innerWidth > 1300 ? "https://http2.mlstatic.com/frontend-assets/ml-web-navigation/ui-navigation/5.22.13/mercadolibre/logo__large_plus.png" : mercadoLibreLogo} alt="Mercado Libre logo" className="lg:min-w-[134px] min-w-[45px] h-[34px] cursor-pointer"/>
                 </Link>  
                 <div className="w-[90%] max-w-[580px] relative">
-                    <input type="text" name="buscar" placeholder="Buscar productos, marcas y más..." className="h-[40px] placeholder-transparent w-full rounded-sm pl-3 shadow-md text-sm lg:placeholder-opacity-40 lg:placeholder-gray-500 outline-none"/>
+                    <input type="text" name="buscar" placeholder="Estoy buscando..." className="h-[40px]  w-full rounded-sm pl-3 shadow-md text-sm placeholder-opacity-40 placeholder-gray-500 outline-none"/>
                     <button className="absolute right-0 top-0 h-[40px] w-[46px] flex items-center bg-white">
                         <span className="h-[60%] border-l-gray-200 border-l-[1px] "></span>
                         <IoSearchOutline className="text-gray-600 mx-auto text-base"/>
