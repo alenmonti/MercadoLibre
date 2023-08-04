@@ -26,13 +26,13 @@ const Footer = () => {
             </div>
             <div className="w-full flex justify-center">
                 <div className="flex justify-between items-center gap-2 w-[1200px] text-center flex-col lg:flex-row">
-                    <div className="flex flex-col rounded-md border-gray-300 w-full max-w-[47%] border-[1px] py-4 gap-1 justify-center min-h-[110px] h-min">
+                    <div className="flex flex-col rounded-md border-gray-300 w-full lg:max-w-[47%] max-w-[90%] border-[1px] py-4 gap-1 justify-center min-h-[110px] h-min">
                         <p className="text-sm">Botón de arrepentimiento</p>
                         <a className="text-xs text-blue-600" href="https://www.mercadolibre.com.ar/seguridad" target="_blank">Cancelar una compra</a>
                         <a className="text-xs text-blue-600" href="https://www.mercadolibre.com.ar/seguridad" target="_blank">Cancelar una suscripción</a>
                         <a className="text-xs text-blue-600" href="https://www.mercadolibre.com.ar/seguridad" target="_blank">Cancelar un seguro o garantía</a>
                     </div>
-                    <div className="flex flex-col rounded-md border-gray-300 border-[1px] w-full max-w-[47%] py-4 gap-1 justify-center min-h-[110px] h-min">
+                    <div className="flex flex-col rounded-md border-gray-300 border-[1px] w-full lg:max-w-[47%] max-w-[90%] py-4 gap-1 justify-center min-h-[110px] h-min">
                         <p className="text-sm">Conocé las normas que aplican cuando comprás</p>
                         <a className="text-xs text-blue-600" href="https://www.mercadolibre.com.ar/seguridad" target="_blank">Ver contratos de adhesión - Ley N.º 24.240 de Defensa del Consumidor</a>
                     </div>

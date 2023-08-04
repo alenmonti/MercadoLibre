@@ -3,13 +3,14 @@ import {IoSearchOutline} from "react-icons/io5";
 import {CiLocationOn} from "react-icons/ci";
 import {BsCart2} from "react-icons/bs";
 import { Link } from "react-router-dom";
+import mercadoLibreLogo from "../images/mercado-libre-manos.png"
 
 const Navbar = ({setProductsFilter, setOpenCart, cartItems}) => {
     return (
         <div className="bg-[#fff159] relative z-40">
-            <div className="w-full max-w-[1200px] mx-auto p-2 flex justify-between lg:grid grid-cols-[max-content_minmax(350px,_1fr)_max-content] grid-rows-[1fr_max-content] gap-x-5 gap-y-4 justify-items-center items-end">
+            <div className="w-full max-w-[1200px] mx-auto p-2 flex items-center justify-between lg:grid grid-cols-[max-content_minmax(350px,_1fr)_max-content] grid-rows-[1fr_max-content] gap-x-5 gap-y-4 justify-items-center lg:items-end">
                 <Link to="/">
-                    <img onClick={() => setProductsFilter("")} src="https://http2.mlstatic.com/frontend-assets/ml-web-navigation/ui-navigation/5.22.13/mercadolibre/logo__large_plus.png" alt="Mercado Libre logo" className="min-w-[134px] h-[34px] cursor-pointer"/>
+                    <img onClick={() => setProductsFilter("")} src={window.innerWidth > 1300 ? "https://http2.mlstatic.com/frontend-assets/ml-web-navigation/ui-navigation/5.22.13/mercadolibre/logo__large_plus.png" : mercadoLibreLogo} alt="Mercado Libre logo" className="lg:min-w-[134px] min-w-[45px] h-[34px] cursor-pointer"/>
                 </Link>  
                 <div className="w-[90%] max-w-[580px] relative">
                     <input type="text" name="buscar" placeholder="Buscar productos, marcas y más..." className="h-[40px] placeholder-transparent w-full rounded-sm pl-3 shadow-md text-sm lg:placeholder-opacity-40 lg:placeholder-gray-500 outline-none"/>
