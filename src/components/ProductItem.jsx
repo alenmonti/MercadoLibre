@@ -1,17 +1,16 @@
 import React, { useEffect } from "react";
-import {textLimit} from "../functions";
+import { textLimit } from "../functions";
 import { formatPrice } from "../functions";
 import { BsFillLightningFill } from "react-icons/bs";
 import { BsPlusLg } from "react-icons/bs";
 import { FaRegEye } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-
 const ProductItem = ({ product, cartItems, setCartItems }) => {
     const discount = Math.floor(product.id % 2);
 
     return (
-        <div className="bg-white flex flex-col w-[300px] lg:w-[222px] rounded-md mb-6 shadow-md hover:shadow-xl relative">
+        <div className="bg-white flex flex-col w-[300px] min-w-[300px] lg:w-[222px] lg:min-w-[222px] rounded-md mb-6 shadow-md hover:shadow-xl relative">
             <div className="absolute top-0 right-0 z-30 flex flex-col gap-2 m-2">
                 <button
                     onClick={() => {
@@ -29,8 +28,7 @@ const ProductItem = ({ product, cartItems, setCartItems }) => {
                     className="text-center text-2xl p-1 cursor-pointer bg-red-300 shadow-md rounded-sm">
                     <BsPlusLg size={15} />
                 </button>
-                <Link to={`/product/${product.id}`}
-                    className="text-center text-2xl p-1 cursor-pointer bg-white shadow-md rounded-sm">
+                <Link to={`/product/${product.id}`} className="text-center text-2xl p-1 cursor-pointer bg-white shadow-md rounded-sm">
                     <FaRegEye size={15} />
                 </Link>
             </div>
