@@ -6,7 +6,7 @@ import ml2 from "../images/ml2.jpg";
 import ml3 from "../images/ml3.jpg";
 import ml4 from "../images/ml4.jpg";
 import ml5 from "../images/ml5.jpg";
-const sliderList = [ml1, ml2, ml3, ml4, ml5];
+const sliderList = [ml2, ml4, ml3, ml5, ml1];
 const gap = 160;
 // tailwind clases
 //translate-x-0 translate-x-[-1760px] translate-x-[-3520px] translate-x-[-5280px] translate-x-[-7040px] 
@@ -30,6 +30,14 @@ const Slider = () => {
             setX(e.clientX);
         }} onDragEnd={(e)=> {
             if(e.clientX - x > 0) {
+                prev();
+            } else {
+                next();
+            }
+        }} onTouchStart={(e)=> {
+            setX(e.touches[0].clientX);
+        }} onTouchEnd={(e)=> {
+            if(e.changedTouches[0].clientX - x > 0) {
                 prev();
             } else {
                 next();

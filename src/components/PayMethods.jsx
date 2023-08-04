@@ -3,7 +3,7 @@ import PayMethod from "./PayMethod";
 
 const PayMethods = () => {
     return (
-        <div className="bg-[#ffffff] flex flex-col items-start mx-auto w-max py-5 px-2 gap-2 my-[40px] justify-evenly rounded-md shadow-md lg:flex-row lg:w-max xl:min-w-[1200px] lg:items-center">
+        <div className="bg-[#ffffff] flex  mx-auto w-max py-5 px-2 gap-2 my-[40px] justify-evenly rounded-md shadow-md min-w-[1200px] items-center overflow-x-scroll scroll">
             <PayMethod img="https://http2.mlstatic.com/storage/homes-korriban/assets/images/payments/credit-card.svg" type="Tarjeta de crédito" link="Ver promociones bancarias"/>
             <PayMethod img="https://http2.mlstatic.com/storage/homes-korriban/assets/images/payments/debit-card.svg" type="Tarjeta de débito" link="Ver más"/>
             <PayMethod img="https://http2.mlstatic.com/storage/homes-korriban/assets/images/payments/mercado-creditsv2.svg" type="Cuotas sin tarjeta" link="Conocé Mercado Crédito"/>

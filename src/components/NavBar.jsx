@@ -9,7 +9,7 @@ const Navbar = ({setProductsFilter, setOpenCart, cartItems}) => {
     return (
         <div className="bg-[#fff159] relative z-40">
             <div className="w-full max-w-[1200px] mx-auto p-2 flex items-center justify-between lg:grid grid-cols-[max-content_minmax(350px,_1fr)_max-content] grid-rows-[1fr_max-content] gap-x-5 gap-y-4 justify-items-center lg:items-end">
-                <Link to="/">
+                <Link to="/MercadoLibre/">
                     <img onClick={() => setProductsFilter("")} src={window.innerWidth > 1300 ? "https://http2.mlstatic.com/frontend-assets/ml-web-navigation/ui-navigation/5.22.13/mercadolibre/logo__large_plus.png" : mercadoLibreLogo} alt="Mercado Libre logo" className="lg:min-w-[134px] min-w-[45px] h-[34px] cursor-pointer"/>
                 </Link>  
                 <div className="w-[90%] max-w-[580px] relative">

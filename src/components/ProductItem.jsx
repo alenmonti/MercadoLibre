@@ -11,7 +11,7 @@ const ProductItem = ({ product, cartItems, setCartItems }) => {
     const discount = Math.floor(product.id % 2);
 
     return (
-        <div className="bg-white flex flex-col w-[222px] rounded-md mb-6 shadow-md hover:shadow-xl relative">
+        <div className="bg-white flex flex-col w-[300px] lg:w-[222px] rounded-md mb-6 shadow-md hover:shadow-xl relative">
             <div className="absolute top-0 right-0 z-30 flex flex-col gap-2 m-2">
                 <button
                     onClick={() => {
