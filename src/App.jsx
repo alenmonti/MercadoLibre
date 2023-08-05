@@ -11,6 +11,7 @@ const App = () => {
     const [cartItems, setCartItems] = useState([]);
     const [productsFilter, setProductsFilter] = useState("");
     const [products, setProducts] = useState([]);
+    const [searchFilter, setSearchFilter] = useState("");
     useEffect(() => {
         const fetchProducts = async () => {
             const response = await fetch("https://fakestoreapi.com/products");
@@ -19,10 +20,11 @@ const App = () => {
         }
         fetchProducts();
     }, []);
-    const HomeProps = {productsFilter, products, cartItems, setCartItems};
+    const HomeProps = {productsFilter, products, cartItems, setCartItems, searchFilter, setSearchFilter};
+    const NavBarProps = {setProductsFilter, setOpenCart, cartItems, searchFilter, setSearchFilter}
     return (
         <Router>
-            <NavBar setProductsFilter={setProductsFilter} setOpenCart={setOpenCart} cartItems={cartItems} />
+            <NavBar {...NavBarProps} />
             <Routes>
                 <Route path="/MercadoLibre" element={<Home {...HomeProps} />} />
                 <Route path="/product/:id" element={<ProductPage cartItems={cartItems} setCartItems={setCartItems}/>} />
