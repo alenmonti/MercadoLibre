@@ -4,6 +4,7 @@ import {CiLocationOn} from "react-icons/ci";
 import {BsCart2} from "react-icons/bs";
 import { Link } from "react-router-dom";
 import mercadoLibreLogo from "../images/mercado-libre-manos.png"
+import Search from "./Search";
 
 const Navbar = ({setProductsFilter, setOpenCart, cartItems}) => {
     return (
@@ -12,13 +13,7 @@ const Navbar = ({setProductsFilter, setOpenCart, cartItems}) => {
                 <Link to="/MercadoLibre/">
                     <img onClick={() => setProductsFilter("")} src={window.innerWidth > 1300 ? "https://http2.mlstatic.com/frontend-assets/ml-web-navigation/ui-navigation/5.22.13/mercadolibre/logo__large_plus.png" : mercadoLibreLogo} alt="Mercado Libre logo" className="lg:min-w-[134px] min-w-[45px] h-[34px] cursor-pointer"/>
                 </Link>  
-                <div className="w-[90%] max-w-[580px] relative">
-                    <input type="text" name="buscar" placeholder="Estoy buscando..." className="h-[40px]  w-full rounded-sm pl-3 shadow-md text-sm placeholder-opacity-40 placeholder-gray-500 outline-none"/>
-                    <button className="absolute right-0 top-0 h-[40px] w-[46px] flex items-center bg-white">
-                        <span className="h-[60%] border-l-gray-200 border-l-[1px] "></span>
-                        <IoSearchOutline className="text-gray-600 mx-auto text-base"/>
-                    </button>
-                </div>
+                <Search/>
                 <img src="https://http2.mlstatic.com/D_NQ_957153-MLA69318147677_052023-OO.webp" alt="Nivel 6" className="w-[340px] h-[39px] cursor-pointer hidden lg:inline-block"/>
                 <div className="hidden cursor-pointer lg:flex">
                     <CiLocationOn className="text-2xl text-gray-600"/>
